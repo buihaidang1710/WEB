@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <script src="https://kit.fontawesome.com/30d0976aea.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <button class="openbtn" id="openbtn">☰</button>
+        <div class="header__text">
+            Thiết bị hệ thống thông minh 
+        </div>  
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </div>
+    </div> 
+    <div class="middle">
+        <div class="middle__temp grid_three">
+            <p class="middle__text">
+                <i class="fa-solid fa-temperature-low"></i>
+                Nhiệt độ: <span id="temperature">--°C</span>
+            </p>
+        </div>
+        <div class="middle__humid grid_three">
+            <p class="middle__text">
+                <i class="ti-cloud"></i>
+                Độ ẩm: <span id="humidity">--%</span>
+            </p>
+        </div>
+        <div class="middle__light grid_three">
+            <p class="middle__text">
+                <i class="ti-shine"></i>
+                Ánh sáng: <span id="light">-- Lux</span>
+            </p>
+        </div>
+    </div>
+    <div class="chart-container">
+        <canvas id="combined-chart"></canvas>
+    </div>  
+    <div class="main-container">
+      <div class="footer__control footer__control-top">
+        <p class="middle__text grid_control">
+            <img src="upload/z4691164923674_f6bc92669080b2866135645212a6d31c.jpg" alt="Quạt">
+            <label class="switch">
+                <input type="checkbox" id="fan-switch">
+                <span class="slider"></span>
+                <span class="status"></span>
+            </label>
+        </p>
+     </div>
+     <div class="footer__control footer__control-bottom">
+        <p class="middle__text grid_control">
+            <img src="upload/z4691164617456_308920708516295429bc2f76d92f8dec.jpg" alt="Quạt">
+            <label class="switch">
+                <input type="checkbox" id="fan-switch">
+                <span class="slider"></span>
+                <span class="status"></span>
+            </label>
+        </p>
+     </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

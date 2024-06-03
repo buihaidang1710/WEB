@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chuyển đổi hệ cơ số</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chuyển đổi hệ cơ số</h1>
+        <form id="Form-1">
+            <label for="numberInput">Số:</label>
+            <input type="number" id="numberInput">
+            <span id="errorMessage"></span>
+            <label for="sourceBaseSelect">Từ:</label>
+            <select id="sourceBaseSelect" name="sourceBase">
+                <option value="2">Nhị phân</option>
+                <option value="8">Bát phân</option>
+                <option value="10">Thập phân</option>
+                <option value="16">Thập lục phân</option>
+            </select>
+            <br><br>
+            <label for="targetBaseSelect">Sang:</label>
+            <select id="targetBaseSelect" name="targetBase">
+                <option value="2">Nhị phân</option>
+                <option value="8">Bát phân</option>
+                <option value="10">Thập phân</option>
+                <option value="16">Thập lục phân</option>
+            </select>
+            <br><br>
+            <button type="submit" class="btn">THỰC HIỆN ĐỔI</button>
+        </form>
+    </div>
+    <br>
+    <div class="result-container">
+        <form id="resultForm">
+            <label for="output">Kết quả:</label>
+            <input type="text" id="output" readonly>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

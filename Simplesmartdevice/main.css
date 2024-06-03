@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;       
+    line-height: 1.6rem;  
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    height: 50px;
+    background-color:#111;
+
+}
+.header__text {
+ 
+    margin-bottom: 10px;
+    color:brown;
+    text-align: center;
+
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.middle {
+    height: 200px;
+    background-color: #4d4f5c;
+    display: flex;
+    position: relative; 
+}
+.middle__temp{
+    background-color: #fe6b7c;
+    color: white;
+}
+.middle__humid{
+    background-color: #01b5b8;
+    color: white;
+}
+.middle__light{
+    background-color: #fead8b;
+    color: white;
+}
+.grid_three{
+    width: 33.333%;
+    height: 150px;
+    margin: 20px 30px;
+    border-radius: 15px;
+}
+.middle__text {
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.4s;
+} 
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+.openbtn {
+    font-size: 18px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    background-color:#111;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+/* CSS cho biểu đồ */
+.chart-container {
+    width: 70%;
+    height: 400px;
+    margin-top: 20px;
+    float: left;
+}
+
+/* CSS cho cả hai công tắc */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 35px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Điều chỉnh các hình ảnh */
+
+.grid_control img {
+    width: 75px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.grid_control {
+    background-color: #e8e8e8;
+    margin: 10px 20px;
+    border-radius: 20px;  
+    width: 350px;
+    float: right;  
+    height: auto;
+    cursor: pointer;
+}
+.grid_control:hover {
+    opacity: 1;
+}
+
+/*Định dạng cho phần công tắc ở trên */
+.footer__control-top {
+    float:right ;
+    width: 100%;
+    margin-bottom: 20px;
+} 
+
+/* Định dạng cho phần công tắc ở dưới */
+.footer__control-bottom {
+    float:right;
+    width: 100%;
+}
+/* Ẩn ô checkbox */
+.footer__control-bottom input[type="checkbox"] {
+    display: none;
+}
+/* Ẩn ô checkbox */
+.footer__control-top input[type="checkbox"] {
+    display: none;
+}
+.status {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #333; /* Màu sắc chữ */
+    font-size: 11px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+}
+
+/* Chữ "ON" khi công tắc bật */
+input:checked + .slider + .status::before {
+    content: "ON";
+}
+
+/* Chữ "OFF" khi công tắc tắt */
+input:not(:checked) + .slider + .status::before {
+    content: "OFF";
+}
+
+/* CSS cho main-container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between; 
+    margin: 20px;
+} 
+
+
+
